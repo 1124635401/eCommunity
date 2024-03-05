@@ -1,0 +1,22 @@
+@startuml
+class YezhuController {
+- YezhuService yezhuService
+- TokenService tokenService
++ R login(String,String,String,HttpServletRequest)
++ R register(YezhuEntity)
++ R logout(HttpServletRequest)
++ R getCurrUser(HttpServletRequest)
++ R resetPass(String,HttpServletRequest)
++ R page(Map<String,Object>,YezhuEntity,HttpServletRequest)
++ R list(Map<String,Object>,YezhuEntity,HttpServletRequest)
++ R list(YezhuEntity)
++ R query(YezhuEntity)
++ R info(Long)
++ R detail(Long)
++ R save(YezhuEntity,HttpServletRequest)
++ R add(YezhuEntity,HttpServletRequest)
++ R update(YezhuEntity,HttpServletRequest)
++ R delete(Long[])
++ R remindCount(String,HttpServletRequest,String,Map<String,Object>)
+}
+@enduml
